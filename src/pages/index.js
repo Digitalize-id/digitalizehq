@@ -24,7 +24,7 @@ import PopupWidget from '../components/popupWidget'
 
 // const PopupWidget = dynamic(() => import("../components/popupWidget"));
 
-export default function Home() {
+export default function Home({ animData }) {
   return (
     <>
       <Head>
