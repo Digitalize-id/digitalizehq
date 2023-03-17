@@ -1,8 +1,11 @@
 import Image from 'next/image'
 import Container from './container'
-import heroImg from '../public/img/hero.png'
+import heroImg from '../../public/img/hero.png'
+import useLottieUrl from '../hooks/useLottieUrl'
+import Lottie from 'lottie-react'
 
 export default function Hero() {
+  const animData = useLottieUrl()
   return (
     <>
       <Container className="flex flex-wrap ">
@@ -49,9 +52,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="flex items-center justify-center w-full lg:w-1/2">
-          <div className="">
-            <Image src={heroImg} width="616" height="617" alt="Hero Illustration" loading="eager" placeholder="blur" />
-          </div>
+          <div className="">{animData && <Lottie animationData={animData} loop />}</div>
         </div>
       </Container>
       <Container>
