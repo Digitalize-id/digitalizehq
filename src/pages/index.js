@@ -34,7 +34,7 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      <Hero />
+      <Hero animData={animData} />
       <SectionTitle pretitle="Nextly Benefits" title=" Why should you use this landing page">
         Nextly is a free landing page & marketing website template for startups and indie projects. Its built with
         Next.js & TailwindCSS. And its completely open-source.
@@ -56,4 +56,15 @@ export default function Home() {
       <PopupWidget />
     </>
   )
+}
+
+export async function getStaticProps() {
+  const response = await fetch('https://assets4.lottiefiles.com/packages/lf20_ypej3gd9.json')
+  const data = await response.json()
+
+  return {
+    props: {
+      animData: data,
+    },
+  }
 }
