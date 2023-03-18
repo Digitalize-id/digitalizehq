@@ -1,12 +1,20 @@
-import React from "react";
-import Container from "./container";
+import clsx from 'clsx';
+import React, { PropsWithChildren } from 'react';
+import Container from './Container';
 
-export default function SectionTitle(props) {
+type Props = {
+  title?: string;
+  align?: string;
+  pretitle?: string;
+};
+
+export default function SectionTitle(props: PropsWithChildren<Props>) {
   return (
     <Container
-      className={`flex w-full flex-col mt-4 ${
-        props.align === "left" ? "" : "items-center justify-center text-center"
-      }`}>
+      className={clsx('flex w-full flex-col mt-4', {
+        'items-center justify-center text-center': props.align !== 'left',
+      })}
+    >
       {props.pretitle && (
         <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
           {props.pretitle}
