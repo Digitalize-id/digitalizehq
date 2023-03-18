@@ -8,7 +8,7 @@ import Container from './Container';
 export default function OurTeam() {
   return (
     <Container>
-      <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-10 lg:grid-cols-2 ">
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <Avatar

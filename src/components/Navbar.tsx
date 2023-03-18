@@ -5,7 +5,7 @@ export default function Navbar() {
   const navigation = ['Product', 'Features', 'Pricing', 'Company', 'Blog'];
 
   return (
-    <div className="w-full backdrop-blur-md bg-neutral-900/30 sticky top-0 left-0 z-10">
+    <div className="w-full backdrop-blur-md bg-neutral-900/30 fixed top-0 left-0 z-10">
       <nav className="container relative flex flex-wrap items-center justify-between px-8 py-4 mx-auto lg:justify-between xl:px-0">
         {/* Logo  */}
         <Disclosure>
