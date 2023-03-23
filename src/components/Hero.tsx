@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="pt-32">
       <Container className="flex flex-wrap ">
         <div className="flex items-center justify-center w-full text-center">
-          <div className="max-w-2xl mb-8">
+          <div className="max-w-3xl mb-8">
             <h1 className="text-4xl text-gradient font-bold leading-snug tracking-tight text-transparent lg:text-5xl lg:leading-tight xl:text-6xl xl:leading-tight">
               Modernizing your business with the power of new technologies
             </h1>
