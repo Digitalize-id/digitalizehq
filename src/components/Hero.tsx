@@ -1,43 +1,31 @@
-import Lottie from 'lottie-react';
-import Link from 'next/link';
-
 import Container from './Container';
 
-type Props = {
-  animData: unknown;
-};
-
-export default function Hero({ animData }: Props) {
+export default function Hero() {
   return (
-    <>
-      <Container className="flex flex-wrap mt-12">
-        <div className="flex items-center w-full lg:w-1/2">
+    <section className="pt-32">
+      <Container className="flex flex-wrap ">
+        <div className="flex items-center justify-center w-full text-center">
           <div className="max-w-2xl mb-8">
-            <h1 className="text-4xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
+            <h1 className="text-4xl bg-gradient-to-tl from-pink-500 to-indigo-600 bg-clip-text font-bold leading-snug tracking-tight text-transparent lg:text-5xl lg:leading-tight xl:text-6xl xl:leading-tight">
               Modernize Digital Revolution
             </h1>
             <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
               Wujudkan aplikasi / website bisnis anda dengan teknologi kekinian bersama kami
             </p>
 
-            <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
-              <Link
-                href="#"
-                className="px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md "
-              >
-                Katalog {'->'}
-              </Link>
+            <div className="flex flex-col items-center space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:justify-center sm:flex-row">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 animate-pulse to-pink-600 rounded-lg blur"></div>
+                <button className="px-8 py-4 relative text-lg font-medium text-center text-white bg-neutral-900 rounded-md ">
+                  Katalog {'->'}
+                </button>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="flex items-center justify-center w-full lg:w-1/2">
-          <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-600 via-neutral-900 to-neutral-900">
-            <Lottie animationData={animData} loop height={200} />
           </div>
         </div>
       </Container>
       <Container>
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center mt-24">
           <div className="text-lg text-center text-gray-700 dark:text-white">
             Bulding with modern technologies
           </div>
@@ -61,7 +49,7 @@ export default function Hero({ animData }: Props) {
           </div>
         </div>
       </Container>
-    </>
+    </section>
   );
 }
 

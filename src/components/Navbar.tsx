@@ -1,11 +1,35 @@
 import Link from 'next/link';
 import { Disclosure, Transition } from '@headlessui/react';
+import { useEffect, useRef } from 'react';
 
 export default function Navbar() {
+  const ref = useRef<HTMLDivElement>(null);
+
   const navigation = ['Product', 'Features', 'Pricing', 'Company', 'Blog'];
 
+  useEffect(() => {
+    const classs = 'backdrop-blur-md';
+    const classs2 = 'bg-neutral-900/30';
+
+    const fun = () => {
+      if (window.scrollY >= 100) {
+        ref.current?.classList.add(classs);
+        ref.current?.classList.add(classs2);
+      } else {
+        ref.current?.classList.remove(classs);
+        ref.current?.classList.remove(classs2);
+      }
+    };
+
+    window.addEventListener('scroll', fun);
+
+    return () => {
+      return window.removeEventListener('scroll', fun);
+    };
+  }, []);
+
   return (
-    <div className="w-full backdrop-blur-md bg-neutral-900/30 fixed top-0 left-0 z-10">
+    <div className="w-full fixed top-0 left-0 z-50 transition-all duration-200" ref={ref}>
       <nav className="container relative flex flex-wrap items-center justify-between px-8 py-4 mx-auto lg:justify-between xl:px-0">
         {/* Logo  */}
         <Disclosure>
@@ -66,13 +90,6 @@ export default function Navbar() {
                           {item}
                         </Link>
                       ))}
-
-                      <Link
-                        href="/"
-                        className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5"
-                      >
-                        Get Started
-                      </Link>
                     </>
                   </Disclosure.Panel>
                 </Transition>
@@ -95,12 +112,6 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-        </div>
-
-        <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-          <Link href="/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
-            Get Started
-          </Link>
         </div>
       </nav>
     </div>
