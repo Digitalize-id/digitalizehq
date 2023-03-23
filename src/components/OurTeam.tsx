@@ -8,9 +8,10 @@ import Container from './Container';
 export default function OurTeam() {
   return (
     <Container>
-      <div className="grid gap-10 lg:grid-cols-2 ">
-        <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
+      <div className="grid gap-10 lg:grid-cols-2 max-w-4xl mx-auto">
+        <div className="relative group">
+          <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 opacity-50 duration-300 group-hover:opacity-100 to-pink-600 rounded-lg blur"></div>
+          <div className="flex relative flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <Avatar
               image={userTwoImg}
               name="I Putu Saputrayana"
@@ -18,8 +19,9 @@ export default function OurTeam() {
             />
           </div>
         </div>
-        <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
+        <div className="relative group">
+          <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 opacity-50 duration-300 group-hover:opacity-100 to-pink-600 rounded-lg blur"></div>
+          <div className="flex relative flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <Avatar
               image={userThreeImg}
               name="Muh. Isrim"

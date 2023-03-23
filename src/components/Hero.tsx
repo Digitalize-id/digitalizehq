@@ -6,8 +6,8 @@ export default function Hero() {
       <Container className="flex flex-wrap ">
         <div className="flex items-center justify-center w-full text-center">
           <div className="max-w-2xl mb-8">
-            <h1 className="text-4xl bg-gradient-to-tl from-pink-500 to-indigo-600 bg-clip-text font-bold leading-snug tracking-tight text-transparent lg:text-5xl lg:leading-tight xl:text-6xl xl:leading-tight">
-              Modernize Digital Revolution
+            <h1 className="text-4xl text-gradient font-bold leading-snug tracking-tight text-transparent lg:text-5xl lg:leading-tight xl:text-6xl xl:leading-tight">
+              Modernizing your business with the power of new technologies
             </h1>
             <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
               Wujudkan aplikasi / website bisnis anda dengan teknologi kekinian bersama kami

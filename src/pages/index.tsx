@@ -17,7 +17,7 @@ type Props = {
   animDataWeb: unknown;
 };
 
-const Home: NextPage<Props> = ({ animData, animDataMobile, animDataWeb }) => {
+const Home: NextPage<Props> = ({ animDataMobile, animDataWeb }) => {
   return (
     <Fragment>
       <Head>
@@ -29,7 +29,7 @@ const Home: NextPage<Props> = ({ animData, animDataMobile, animDataWeb }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Hero animData={animData} />
+      <Hero />
       <SectionTitle pretitle="Tentang Kami" title="Modernize Digital Revolution">
         Dengan tim berpengalaman, kami bergerak dibidang Teknologi Informasi dengan konsentrasi
         pengembangan Aplikasi dan Sistem Informasi berbasis Web maupun Mobile yang memanfaatkan

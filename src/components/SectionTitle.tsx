@@ -16,7 +16,7 @@ export default function SectionTitle(props: PropsWithChildren<Props>) {
       })}
     >
       {props.pretitle && (
-        <div className="text-sm font-bold tracking-wider text-indigo-600 uppercase">
+        <div className="text-lg font-bold tracking-wider text-gradient uppercase">
           {props.pretitle}
         </div>
       )}
