@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import React from 'react';
 import Container from './Container';
+import CFImage from './CFImage';
 
 export default function Footer() {
   const navigation = ['Product', 'Features', 'Pricing', 'Company', 'Blog'];
@@ -35,7 +35,7 @@ export default function Footer() {
                 rel="noopener"
                 className="relative block w-44"
               >
-                <Image src="/img/vercel.svg" alt="Powered by Vercel" width="212" height="44" />
+                <CFImage src="/img/vercel.svg" alt="Powered by Vercel" width="212" height="44" />
               </a>
             </div>
           </div>

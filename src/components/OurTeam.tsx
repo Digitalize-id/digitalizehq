@@ -1,8 +1,8 @@
-import Image from 'next/image';
 import React from 'react';
 
 import userTwoImg from '../../public/img/user2.jpeg';
 import userThreeImg from '../../public/img/user3.jpeg';
+import CFImage from './CFImage';
 import Container from './Container';
 
 export default function OurTeam() {
@@ -37,7 +37,12 @@ export default function OurTeam() {
 function Avatar(props: any) {
   return (
     <div className="flex flex-col text-center items-center mt-8 space-x-3">
-      <Image src={props.image} alt="Avatar" placeholder="blur" className="rounded-full h-24 w-24" />
+      <CFImage
+        src={props.image}
+        alt="Avatar"
+        placeholder="blur"
+        className="rounded-full h-24 w-24"
+      />
       <div className="mt-2">
         <div className="text-lg font-medium">{props.name}</div>
         <div className="text-gray-600 dark:text-gray-400">{props.title}</div>
