@@ -1,4 +1,3 @@
-import Lottie from 'lottie-react';
 import React, { Fragment, PropsWithChildren } from 'react';
 import Container from './Container';
 import { Benefit, BenefitBullet } from './data';
@@ -6,11 +5,11 @@ import { Benefit, BenefitBullet } from './data';
 type Props = {
   imgPos?: string;
   data?: Benefit;
-  animData: unknown;
+  Illustration?: JSX.Element;
 };
 
 export default function Benefits(props: PropsWithChildren<Props>) {
-  const { data, animData } = props;
+  const { data, Illustration } = props;
 
   return (
     <>
@@ -20,9 +19,7 @@ export default function Benefits(props: PropsWithChildren<Props>) {
             props.imgPos === 'right' ? 'lg:order-1' : ''
           }`}
         >
-          <div>
-            <Lottie animationData={animData} loop height={482} />
-          </div>
+          <div>{Illustration}</div>
         </div>
 
         <div

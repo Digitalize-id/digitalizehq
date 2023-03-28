@@ -10,14 +10,15 @@ import { benefitOne, benefitTwo } from '@app/components/data';
 import OurTeam from '@app/components/OurTeam';
 import Footer from '@app/components/Footer';
 import Cta from '@app/components/Cta';
+import MobileIllustration from '@app/assets/svg/Mobile';
+import WebIllustration from '@app/assets/svg/Web';
 
 type Props = {
-  animData: unknown;
   animDataMobile: unknown;
   animDataWeb: unknown;
 };
 
-const Home: NextPage<Props> = ({ animDataMobile, animDataWeb }) => {
+const Home: NextPage<Props> = () => {
   return (
     <Fragment>
       <Head>
@@ -38,52 +39,21 @@ const Home: NextPage<Props> = ({ animDataMobile, animDataWeb }) => {
       </SectionTitle>
 
       <SectionTitle title="Layanan Kami" pretitle="Services" />
-      <Benefits animData={animDataMobile} data={benefitOne} />
-      <Benefits animData={animDataWeb} imgPos="right" data={benefitTwo} />
+      <Benefits
+        data={benefitOne}
+        Illustration={<MobileIllustration className="md:w-[600px] md:h-[500px] w-[300px]" />}
+      />
+      <Benefits
+        imgPos="right"
+        data={benefitTwo}
+        Illustration={<WebIllustration className="md:w-[600px] md:h-[500px] w-[350px]" />}
+      />
       <SectionTitle pretitle="Tim" title="Tim pengembang kami" />
       <OurTeam />
-      {/* 
-      
-     
-      <Benefits imgPos="right" data={benefitTwo} />
-   
-     
-      <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
-        Answer your customers possible questions here, it will increase the conversion rate as well
-        as support or chat requests.
-      </SectionTitle>
-      <Faq />
-  
-     
-      <PopupWidget /> */}
       <Cta />
       <Footer />
     </Fragment>
   );
 };
 
-export async function getStaticProps() {
-  const [hero, web, mobile] = await Promise.all([
-    fetch('https://assets4.lottiefiles.com/packages/lf20_ypej3gd9.json'),
-    fetch('https://assets7.lottiefiles.com/packages/lf20_ksrcyxgn.json'),
-    fetch('https://assets5.lottiefiles.com/packages/lf20_wloxwco0.json'),
-  ]);
-
-  return {
-    props: {
-      animData: await hero.json(),
-      animDataMobile: await mobile.json(),
-      animDataWeb: await web.json(),
-    },
-  };
-}
-
 export default Home;
-
-// export default function Home({ animData }): NextPage<Props> {
-//   return (
-//     <>
-
-//     </>
-//   );
-// }
