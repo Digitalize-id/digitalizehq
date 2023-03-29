@@ -16,7 +16,10 @@ import Image, { type ImageProps } from 'next/image';
 //     params.push(`quality=${quality}`);
 //   }
 //   const paramsString = params.join(',');
-//   return `/cdn-cgi/image/${paramsString}/${normalizeSrc(src)}`;
+//   // return `/cdn-cgi/image/${paramsString}/${normalizeSrc(src)}`;
+
+//   console.log({ src, width, quality });
+//   return src;
 // };
 
 const CFImage = (props: ImageProps) => {

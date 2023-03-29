@@ -11,7 +11,7 @@ export default function OurTeam() {
           <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 opacity-50 duration-300 group-hover:opacity-100 to-pink-600 rounded-lg blur"></div>
           <div className="flex relative flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <Avatar
-              image="/img/user2.jpeg"
+              image="https://digitalizehq.pages.dev/img/user2.jpeg"
               name="I Putu Saputrayana"
               title="Software Engineer 4+ tahun pengalaman: DOOgether, Pintu."
             />
@@ -21,7 +21,7 @@ export default function OurTeam() {
           <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 opacity-50 duration-300 group-hover:opacity-100 to-pink-600 rounded-lg blur"></div>
           <div className="flex relative flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <Avatar
-              image="/img/user3.jpeg"
+              image="https://digitalizehq.pages.dev/img/user3.jpeg"
               name="Muh. Isrim"
               title="Software Engineer 4+ tahun pengalaman: DOOgether, Waresix."
             />
@@ -35,9 +35,13 @@ export default function OurTeam() {
 function Avatar(props: any) {
   return (
     <div className="flex flex-col relative text-center items-center mt-8 space-x-3">
-      <div className="rounded-full h-24 w-24 relative">
-        <CFImage src={props.image} alt="Avatar" className="rounded-full h-24 w-24" fill />
-      </div>
+      <CFImage
+        src={props.image}
+        alt="Avatar"
+        className="rounded-full h-24 w-24"
+        height={96}
+        width={96}
+      />
       <div className="mt-2">
         <div className="text-lg font-medium">{props.name}</div>
         <div className="text-gray-600 dark:text-gray-400">{props.title}</div>
