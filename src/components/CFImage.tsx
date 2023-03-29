@@ -20,7 +20,7 @@ const cloudflareLoader = ({ src, width, quality }: Args) => {
 };
 
 const CFImage = (props: ImageProps) => {
-  return <Image loader={cloudflareLoader} {...props} />;
+  return <Image {...props} />;
 };
 
 export default CFImage;
