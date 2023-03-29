@@ -11,7 +11,7 @@ export default function OurTeam() {
           <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 opacity-50 duration-300 group-hover:opacity-100 to-pink-600 rounded-lg blur"></div>
           <div className="flex relative flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <Avatar
-              image="https://digitalizehq.pages.dev/img/user2.jpeg"
+              image="/img/user2.jpeg"
               name="I Putu Saputrayana"
               title="Software Engineer 4+ tahun pengalaman: DOOgether, Pintu."
             />
@@ -21,7 +21,7 @@ export default function OurTeam() {
           <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 opacity-50 duration-300 group-hover:opacity-100 to-pink-600 rounded-lg blur"></div>
           <div className="flex relative flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <Avatar
-              image="https://digitalizehq.pages.dev/img/user3.jpeg"
+              image="/img/user3.jpeg"
               name="Muh. Isrim"
               title="Software Engineer 4+ tahun pengalaman: DOOgether, Waresix."
             />
